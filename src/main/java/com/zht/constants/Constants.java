@@ -30,7 +30,7 @@ public class Constants {
     //收件箱表
     public static String INBOX_TABLE = "weibo:inbox";
     public static String INBOX_TABLE_CF = "info";
-    public static int  INBOX_TABLE_VERSIONS = 2;
+    public static int  INBOX_TABLE_VERSIONS = 1;
 
 
 
