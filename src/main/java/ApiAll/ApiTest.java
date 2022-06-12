@@ -15,7 +15,7 @@ public class ApiTest {
             //1、获取配置信息
             Configuration configuration = HBaseConfiguration.create();
             configuration.set("hbase.rootdir", "hdfs://192.168.20.62:9000/hbase");
-            configuration.set("hbase.zookeeper.quorum", "hadoop102,hadoop103,hadoop104");
+            configuration.set("hbase.zookeeper.quorum", "192.168.20.62,192.168.20.63,192.168.20.64");
             //2、创建连接对象
             connection = ConnectionFactory.createConnection(configuration);
             //3、创建Admin对象

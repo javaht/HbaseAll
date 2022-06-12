@@ -23,7 +23,7 @@
 <configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://hadoop102:8020/hbase</value>
+    <value>hdfs://192.168.20.62:8020/hbase</value>
   </property>
   <property>
     <name>hbase.cluster.distributed</name>
@@ -31,7 +31,7 @@
   </property>
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>hadoop102,hadoop103,hadoop104</value>
+    <value>192.168.20.62,192.168.20.63,192.168.20.64</value>
   </property>
 <property>
         <name>hbase.master.maxclockskew</name>
