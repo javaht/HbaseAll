@@ -1,8 +1,7 @@
-package com.zht.dao;
+package com.WeiBoTest.dao;
 
 
-import com.zht.constants.Constants;
-import com.zht.utils.HbaseUtil;
+import com.WeiBoTest.constants.Constants;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.TableName;

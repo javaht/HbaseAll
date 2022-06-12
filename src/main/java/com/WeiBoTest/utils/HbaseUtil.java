@@ -1,7 +1,7 @@
-package com.zht.utils;
+package com.WeiBoTest.utils;
 
 
-import com.zht.constants.Constants;
+import com.WeiBoTest.constants.Constants;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.NamespaceDescriptor;
@@ -9,7 +9,6 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.ConnectionFactory;
-import org.apache.hadoop.hbase.client.TableDescriptor;
 
 import java.io.IOException;
 

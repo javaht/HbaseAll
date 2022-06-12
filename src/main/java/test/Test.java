@@ -1,8 +1,8 @@
 package test;
 
-import com.zht.constants.Constants;
-import com.zht.dao.HbaseDao;
-import com.zht.utils.HbaseUtil;
+import com.WeiBoTest.constants.Constants;
+import com.WeiBoTest.dao.HbaseDao;
+import com.WeiBoTest.utils.HbaseUtil;
 
 import java.io.IOException;
 
