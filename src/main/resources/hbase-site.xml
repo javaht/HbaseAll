@@ -38,4 +38,11 @@
         <value>180000</value>
         <description>Time difference of regionserver from master</description>
 </property>
+    <property>
+        <name>phoenix.schema.isNamespaceMappingEnabled</name>
+        <value>true</value>
+        <description>命名空间开启</description>
+    </property>
+
+
 </configuration>
