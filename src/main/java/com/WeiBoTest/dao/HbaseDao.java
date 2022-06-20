@@ -57,7 +57,6 @@ public class HbaseDao {
           Get get  =   new Get(Bytes.toBytes(uid));
           get.addFamily(Bytes.toBytes(Constants.RELATION_TABLE_CF2));
           Result result = relatable.get(get);
-
         //创建一个集合  用于存放微博内容表的Put对象
         ArrayList<Put>  inboxPuts = new ArrayList<>();
 

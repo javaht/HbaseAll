@@ -1,10 +1,14 @@
 package ApiAll;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
-
 import java.io.IOException;
+
+import java.util.List;
+
+
 
 public class ApiTest {
     public static Connection connection = null;
@@ -98,10 +102,46 @@ public class ApiTest {
 
 
         table.put(put);
-
         //关闭表连接
         table.close();
 
+    }
+
+    //批量put
+    public boolean put(String tablename, List<Put> putList)
+    {
+
+
+        BufferedMutator mutator = null;
+        TableName tableName = TableName.valueOf(tablename);
+        BufferedMutatorParams params = new BufferedMutatorParams(tableName);
+        params.writeBufferSize(5*1024*1024); // 可以自己设定阈值 5M 达到5M则提交一次
+        try
+        {
+            mutator = connection.getBufferedMutator(params);
+            mutator.mutate(putList); // 数据量达到5M时会自动提交一次
+            mutator.flush(); // 手动提交一次
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+        finally
+        {
+            try
+            {
+                if(mutator != null) {
+                    mutator.close();  // 提交一次
+
+                }
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return true;
     }
 
     // 获取数据

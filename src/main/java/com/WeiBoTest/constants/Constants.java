@@ -6,7 +6,7 @@ import org.apache.hadoop.hbase.HBaseConfiguration;
 public class Constants {
 
     //hbase的配置信息
- public static  final Configuration CONFIGURATION = HBaseConfiguration.create();
+    public static  final Configuration CONFIGURATION = HBaseConfiguration.create();
 
 
     public static  final String NAMESPACE ="weibo";
